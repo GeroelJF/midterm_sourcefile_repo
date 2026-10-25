@@ -17,3 +17,5 @@ Purpose
 This repository stores my JavaScript lecture examples, laboratory exercises, and hands-on activities.
 
 Geroel J. Federio
+
+Final commit: midterm source files demonstration.
