@@ -1,0 +1,43 @@
+//Student score Analyzer
+let scores = [85, 92, 78, 90, 88, 76, 95, 89, 70, 74];
+    
+console.log("Student Scores:");
+for (let i = 0; i < scores.length; i++) {
+    console.log(scores[i]);
+}
+console.log("\nStudent Results:");
+let passingCount = 0;
+let failingCount = 0;
+let HighestScore = [scores[0]];
+let LowestScore = [scores[0]]; 
+let TotalScore = 0;
+
+for (let i = 0; i < scores.length; i++) {
+    let score = scores[i];
+    TotalScore += score;
+
+if (score >= 90 && score <= 100) {
+    console.log("Student " + (i+1) + ": " + score + " - Excellent - Passed");
+    passingCount++;
+} else if (score >= 80 && score <= 89) {
+    console.log("Student " + (i+1) + ": " + score + " - Very Good - Passed");
+    passingCount++;
+} else if (score >= 75 && score <= 79) {
+    console.log("Student " + (i+1) + ": " + score + " - Good - Passed");
+    passingCount++;
+} else {
+    console.log("Student " + (i+1) + ": " + score + " - Failed");
+    failingCount++;
+}
+if (score > HighestScore[0]) {
+    HighestScore[0] = score;
+}
+if (score < LowestScore[0]) {
+    LowestScore[0] = score;
+}
+}
+console.log("\nTotal Score: " + TotalScore);  
+console.log("Passing Students: "+ passingCount);
+console.log("Failing Students: "+ failingCount);
+console.log("Highest Score: " + HighestScore[0]);
+console.log("Lowest Score: " + LowestScore[0]);
